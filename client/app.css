@@ -1,0 +1,133 @@
+body {
+	background: url(../images/spots_background_light_blur.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+body {
+	padding: 80px 0;
+}
+
+.body-app {
+	width: 768px;
+	padding: 0;
+	margin: 0 auto;
+	background-color: white;
+	position: relative;
+	-webkit-box-shadow: 0px 0px 80px -10px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 80px -10px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 80px -10px rgba(0,0,0,0.75);
+}
+	
+	.left-header,
+	.right-header {
+		padding: 10px;
+		border-bottom: 1px solid #ccc;
+		color: #767676;
+	}
+
+	.left-header {
+		text-align: center;
+		position: relative;
+	}
+
+	.left-header .btn-add-project {
+		position: absolute;
+		left: 0;
+		top: 0;
+		padding: 10px;
+	}
+
+	.left-header .btn-delete-project {
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: 10px;
+	}
+
+	.side-pane {
+		width: 200px;
+		float: left;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.side-pane .project-list {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+		.side-pane .project-list li a {
+			display: block;
+			text-decoration: none;
+			padding: 10px 5px;
+		}
+
+		.side-pane .project-list li a:hover {
+			background-color: #E9ECF3;
+		}
+
+		.side-pane .project-list li.active a {
+			background-color: #D5DDF0;
+		}
+
+	.work-matrix {
+		margin-left: 200px;
+		border-left: 1px solid #ccc;
+		min-height: 400px;
+	}
+		.work-matrix .matrix {
+			min-height: 200px;
+			position: relative;
+			padding-top: 25px;
+		}
+
+		.work-matrix .matrix p {
+			margin: 0;
+		}
+
+		.work-matrix .matrix-1 {
+			background-color: #F8E3E2;
+		}
+
+		.work-matrix .matrix-2 {
+			background-color: #F5F7E1;
+		}
+
+		.work-matrix .matrix-3 {
+			background-color: #DCEAF5;
+		}
+
+		.work-matrix .matrix-4 {
+			background-color: #EDF7EF;
+		}
+
+		.work-matrix .matrix .title {
+			position: absolute;
+			padding-left: 5px;
+			width: 100%;
+			top: 0;
+			left: 0;
+		}
+
+		.work-matrix .matrix-1 .title {
+			background-color: #FFA19D;
+		}
+
+		.work-matrix .matrix-2 .title {
+			background-color: #EFF79D;
+		}
+
+		.work-matrix .matrix-3 .title {
+			background-color: #ADD6F7;
+		}
+
+		.work-matrix .matrix-4 .title {
+			background-color: #B0F9BF;
+		}
+
+		

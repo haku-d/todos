@@ -1,0 +1,26 @@
+<template name="appBody">
+  <div class="body-app">
+    <div class="side-pane">
+        <div class="left-header">
+            <a href="#" class="btn-add-project"><i class="fa fa-plus"></i></a>
+            <a href="#" class="btn-delete-project"><i class="fa fa-trash-o"></i></a>
+            <span>Projects</span>
+        </div>
+        <ul class="project-list">
+            {{ #each projects }}
+                {{ >project }}
+            {{ /each }}
+        </ul>
+    </div>
+    <div class="work-matrix">
+        <div class="right-header">
+            Work to do today
+        </div>
+        <div class="container-fluid">
+          {{#each thisArray}}
+            {{> yield}}
+          {{/each}}  
+        </div>
+    </div>
+  </div>
+</template>

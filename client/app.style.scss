@@ -95,7 +95,7 @@ body {
       padding: 0;
     }
 
-    .matrix-1 {
+    &.matrix-1 {
       background-color: #F8E3E2;
 
       .title {
@@ -103,7 +103,7 @@ body {
       }
     }
 
-    .matrix-2 {
+    &.matrix-2 {
       background-color: #F5F7E1;
 
       .title {
@@ -111,7 +111,7 @@ body {
       }
     }
 
-    .matrix-3 {
+    &.matrix-3 {
       background-color: #DCEAF5;
 
       .title {
@@ -119,7 +119,7 @@ body {
       }
     }
 
-    .matrix-4 {
+    &.matrix-4 {
       background-color: #EDF7EF;
 
       .title {
@@ -133,6 +133,17 @@ body {
       width: 100%;
       top: 0;
       left: 0;
+    }
+
+    .sortable {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      padding-top: 25px;
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
 }

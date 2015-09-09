@@ -10,3 +10,9 @@ Template.appBody.helpers({
     return Projects.find();
   }
 });
+
+Template.sortable.destroyed = function () {
+  if(this.sortable) {
+    this.sortable.destroy()
+  }
+};

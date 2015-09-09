@@ -2,54 +2,70 @@
   <div class="row">
     <div class="col-sm-6 matrix matrix-1">
         <p class="title">Urgent and important</p>
-        {{#with todos this}}
-          {{#each ui}}
-            <p>{{this}}</p>
+        {{#with ui this}}
+          {{#if this}}
+            <div class="sortable" id="ui" data-type="ui">
+            {{#sortable items=this options=uiOptions ghostClass="sortable"}}
+              <p class="sortable-handle">{{name}}</p>
+            {{/sortable}}
+            </div>
           {{else}}
             <div class="wrapper-message">
               <div class="title-message">No tasks here</div>
               <div class="subtitle-message">Double click to add new task</div>
             </div>
-          {{/each}}
+          {{/if}}
         {{/with}}
     </div>
     <div class="col-sm-6 matrix matrix-2">
         <p class="title">Less urgent but important</p>
-        {{#with todos this}}
-          {{#each lui}}
-            <p>{{this}}</p>
+        {{#with lui this}}
+          {{#if this}}
+            <div class="sortable" id="lui" data-type="lui">
+            {{#sortable items=this options=luiOptions ghostClass="sortable"}}
+              <p>{{name}}</p>
+            {{/sortable}}
+            </div>
           {{else}}
             <div class="wrapper-message">
               <div class="title-message">No tasks here</div>
               <div class="subtitle-message">Double click to add new task</div>
             </div>
-          {{/each}}
+          {{/if}}
         {{/with}}
     </div>
     <div class="col-sm-6 matrix matrix-3">
         <p class="title">Urgent, but less important</p>
-        {{#with todos this}}
-          {{#each uli}}
-            <p>{{this}}</p>
+        {{#with uli this}}
+          {{#if this}}
+            <div class="sortable" id="uli" data-type="uli">
+            {{#sortable items=this options=uliOptions ghostClass="sortable"}}
+              <p>{{name}}</p>
+            {{/sortable}}
+            </div>
           {{else}}
             <div class="wrapper-message">
               <div class="title-message">No tasks here</div>
               <div class="subtitle-message">Double click to add new task</div>
             </div>
-          {{/each}}
+          {{/if}}
         {{/with}}
     </div>
     <div class="col-sm-6 matrix matrix-4">
         <p class="title">Neither urgent nor important</p>
-        {{#with todos this}}
-          {{#each nui}}
-            <p>{{this}}</p>
+        {{#with nui this}}
+          {{#if this}}
+            <div class="sortable" id="nui" data-type="nui">
+            {{#sortable items=this options=nuiOptions ghostClass="sortable"}}
+              <p>{{name}}</p>
+            {{/sortable}}
+            </div>
           {{else}}
             <div class="wrapper-message">
               <div class="title-message">No tasks here</div>
               <div class="subtitle-message">Double click to add new task</div>
             </div>
-          {{/each}}
+          {{/if}}
         {{/with}}
     </div>
   </div>

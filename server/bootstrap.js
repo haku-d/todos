@@ -17,18 +17,20 @@ Meteor.startup(function(){
 
 		_.each(sampleProjects, function(project){
 			Projects.insert(project, function(err, _id){
-				console.log(err);
 				// Create sample todo
 				if(!err) {
-					Todos.update({pId: _id}, {
-						$set: {
-							ui: [
-								"Design home page wireframe",
-								"Research leaflet.js"
-							]
-						}
-					}, {
-						upsert: true
+					TodoUI.insert({
+						pId: _id,
+						name: "Design home page wireframe",
+						type: 'ui',
+						order: 1
+					});
+
+					TodoLUI.insert({
+						pId: _id,
+						name: "Research leaflet.js",
+						type: 'lui',
+						order: 2
 					});
 				}
 			});

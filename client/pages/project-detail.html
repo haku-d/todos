@@ -1,13 +1,12 @@
 <template name="projectDetail">
-  <div class="row">
+  <div class="row" id="sortable">
     <div class="col-sm-6 matrix matrix-1">
-        <p class="title">Urgent and important</p>
         {{#with ui this}}
           {{#if this}}
-            <div class="sortable" id="ui" data-type="ui">
-            {{#sortable items=this options=uiOptions ghostClass="sortable"}}
-              <p class="sortable-handle">{{name}}</p>
-            {{/sortable}}
+            <div class="sortable" data-type="ui">
+            {{ #each this}}
+              {{> sortableHandle}}
+            {{ /each }}
             </div>
           {{else}}
             <div class="wrapper-message">
@@ -18,13 +17,12 @@
         {{/with}}
     </div>
     <div class="col-sm-6 matrix matrix-2">
-        <p class="title">Less urgent but important</p>
         {{#with lui this}}
           {{#if this}}
-            <div class="sortable" id="lui" data-type="lui">
-            {{#sortable items=this options=luiOptions ghostClass="sortable"}}
-              <p>{{name}}</p>
-            {{/sortable}}
+            <div class="sortable" data-type="lui">
+            {{ #each this}}
+              {{> sortableHandle}}
+            {{ /each }}
             </div>
           {{else}}
             <div class="wrapper-message">
@@ -35,13 +33,12 @@
         {{/with}}
     </div>
     <div class="col-sm-6 matrix matrix-3">
-        <p class="title">Urgent, but less important</p>
         {{#with uli this}}
           {{#if this}}
-            <div class="sortable" id="uli" data-type="uli">
-            {{#sortable items=this options=uliOptions ghostClass="sortable"}}
-              <p>{{name}}</p>
-            {{/sortable}}
+            <div class="sortable" data-type="uli">
+            {{ #each this}}
+              {{> sortableHandle}}
+            {{ /each }}
             </div>
           {{else}}
             <div class="wrapper-message">
@@ -52,13 +49,12 @@
         {{/with}}
     </div>
     <div class="col-sm-6 matrix matrix-4">
-        <p class="title">Neither urgent nor important</p>
         {{#with nui this}}
           {{#if this}}
-            <div class="sortable" id="nui" data-type="nui">
-            {{#sortable items=this options=nuiOptions ghostClass="sortable"}}
-              <p>{{name}}</p>
-            {{/sortable}}
+            <div class="sortable" data-type="nui">
+            {{ #each this}}
+              {{> sortableHandle}}
+            {{ /each }}
             </div>
           {{else}}
             <div class="wrapper-message">
@@ -69,4 +65,8 @@
         {{/with}}
     </div>
   </div>
+</template>
+
+<template name="sortableHandle">
+  <p data-id={{_id}} class="sortable-handle">{{name}}</p>
 </template>
